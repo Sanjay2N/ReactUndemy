@@ -1,5 +1,5 @@
-import ExpenseItem from "./components/ExpenseItem";
-
+import ExpenseItem from "./components/Expense/ExpenseItem";
+import Card from "./components/UI/Card";
 function App() {
   const expenses = [
     {
@@ -24,9 +24,9 @@ function App() {
   ];
   const expCompo = expenses.map((expense) => {
     return (
-      <div>
+      <Card className="card-cover">
         <ExpenseItem key={expense.id} expense={expense} />
-      </div>
+      </Card>
     );
   });
   return expCompo;
