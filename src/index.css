@@ -14,5 +14,5 @@ body {
 }
 
 .card-cover {
-  width: 30%;
+  width: fit-content;
 }
