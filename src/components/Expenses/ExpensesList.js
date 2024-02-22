@@ -1,17 +1,16 @@
 import ExpenseItem from "./ExpenseItem";
 import "./ExpensesList.css";
 const ExpensesList = (props) => {
-  const filterList = props.items.filter((ele) => {
-    return ele.date.getFullYear() == props.filteredYear;
-  });
-
-  if (filterList.length === 0) {
+  //   console.log("props");
+  //   console.log(filterList);
+  //   props.filteredExpenseStateUp(filterList);
+  if (props.filterList.length === 0) {
     return <h1 className="expenses-list__fallback">No expense Found</h1>;
   }
   //
   return (
     <ul className="expenses-list">
-      {filterList.map((ele) => {
+      {props.filterList.map((ele) => {
         return (
           <ExpenseItem
             key={ele.id}
